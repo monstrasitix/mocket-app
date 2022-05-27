@@ -1,0 +1,20 @@
+@use '../abstract/spacing';
+
+
+.flow {
+    display: flex;
+
+    &.-vertical {
+        flex-direction: column;
+    
+        & > * + * {
+            margin-top: spacing.$flow;
+        }
+    }
+    
+    &.-horizontal {
+        & > * + * {
+            margin-left: spacing.$flow;
+        }
+    }
+}

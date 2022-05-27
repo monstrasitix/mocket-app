@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "jsx": "react-jsx",
+        "baseUrl": "./source",
+        "resolveJsonModule": true,
+        "strictNullChecks": true,
+        "paths": {
+            "@view/*": ["./view/*"],
+            "@hook/*": ["./hook/*"],
+            "@util/*": ["./util/*"],
+            "@model/*": ["./model/*"],
+            "@wrapper/*": ["./wrapper/*"],
+            "@component/*": ["./component/*"],
+            "@app/*": ["./*"]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

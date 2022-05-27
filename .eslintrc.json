@@ -1,0 +1,36 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "rules": {
+        "eol-last": "error",
+        "comma-style": "error",
+        "no-return-await": "error",
+        "no-trailing-spaces": "error",
+        "array-callback-return": "error",
+        "semi": ["error", "always"],
+        "curly": ["error", "all"],
+        "quotes": ["error", "single"],
+        "arrow-body-style": ["error", "as-needed"],
+        "comma-dangle": ["error", "always-multiline"],
+        "arrow-parens": ["error", "as-needed", {
+            "requireForBlockBody": true
+        }],
+        "no-console": "warn",
+        "padding-line-between-statements": [
+            "warn",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "return"
+            }
+        ]
+    }
+}

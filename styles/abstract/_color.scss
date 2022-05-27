@@ -1,0 +1,29 @@
+// General
+$none: transparent;
+$text: #333;
+$white: white;
+$primary: dodgerblue;
+
+// States
+$error: crimson;
+
+// Border
+$border: #dedede;
+$background: #ededed;
+
+// Disabled
+$disabled: lightgray;
+$disabled-text: gray;
+
+// Primary button
+$button-primary-text: $white;
+$button-primary: $primary;
+$button-primary-hover: darken($primary, 5);
+$button-primary-active: darken($primary, 10);
+
+// Secondary button
+$button-secondary-text: $primary;
+$button-secondary: rgba($primary, 0.1);
+$button-secondary-hover: rgba($primary, 0.2);
+$button-secondary-active: rgba($primary, 0.4);
+

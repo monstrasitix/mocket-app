@@ -1,0 +1,11 @@
+@use '../abstract/color';
+@use '../abstract/spacing';
+@use '../abstract/font';
+
+
+.error {
+    display: inline-block;
+    color: color.$error;
+    font-size: font.$label-size;
+    margin-top: spacing.$flow-text;
+}

@@ -1,0 +1,31 @@
+@use '../abstract/border';
+
+
+.card {
+    @include border.around;
+    border-radius: border.$radius;
+
+    background-color: white;
+
+    position: relative;
+    overflow: hidden;
+
+    &-icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    &-image {
+        background-color: silver;
+        height: 200px;
+        width: 100%;
+        display: block;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    &-content {
+        padding: 1em;
+    }
+}

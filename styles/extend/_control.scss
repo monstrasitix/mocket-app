@@ -1,0 +1,37 @@
+@use '../abstract/font';
+@use '../abstract/color';
+@use '../abstract/transition';
+@use '../abstract/layer';
+@use '../abstract/border';
+@use '../abstract/spacing';
+
+%control-base {
+    @include transition.linear(
+        box-shadow,
+        background-color,
+    );
+
+    font-size: font.$control-size;
+    line-height: font.$control-height;
+
+    padding: spacing.$control-padding;
+
+    border-radius: border.$radius;
+
+    outline: none;
+    white-space: nowrap;
+    text-decoration: none;
+
+    &:focus {
+        z-index: layer.$focus;
+        box-shadow: (
+            0 0 0 1px color.$white,
+            0 0 2px 1px color.$primary,
+        );
+    }
+}
+
+@mixin disabled {
+    color: color.$disabled-text;
+    background-color: color.$disabled;
+}

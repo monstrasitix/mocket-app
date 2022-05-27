@@ -1,0 +1,16 @@
+@use './color';
+
+
+$radius: 0.25rem;
+
+
+@mixin around {
+    border-width: 1px;
+    border-style: solid;
+    border-color: color.$border;
+}
+
+
+@mixin none {
+    border-width: 0;
+}

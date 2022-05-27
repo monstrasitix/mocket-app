@@ -1,0 +1,11 @@
+.box {
+    &.-viewport-height {
+        height: 100vh;
+    }
+
+    &.-centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

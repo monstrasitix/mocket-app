@@ -1,0 +1,11 @@
+@use '../abstract/font';
+@use '../abstract/spacing';
+@use '../abstract/color';
+
+
+.label {
+    display: inline-block;
+    font-size: font.$label-size;
+    color: color.$disabled-text;
+    margin-bottom: spacing.$flow-text;
+}
