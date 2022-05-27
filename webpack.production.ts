@@ -11,9 +11,17 @@ import { Env, common } from './webpack.common';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 
-export default (env: Env): Configuration => merge(common(env), {
+/**
+ * @summary Webpack Production
+ * @param {Env} env - Env params
+ * @returns {Configuration} Production webpack configuration
+ */
+const config = (env: Env): Configuration => merge(common(env), {
     mode: 'production',
     plugins: [
         new CleanWebpackPlugin(),
     ],
 });
+
+
+export default config;

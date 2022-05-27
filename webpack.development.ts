@@ -9,7 +9,12 @@ import { merge } from 'webpack-merge';
 import { Env, common, root } from './webpack.common';
 
 
-export default (env: Env): Configuration => merge(common(env), {
+/**
+ * @summary Webpack Development
+ * @param {Env} env - Env params
+ * @returns {Configuration} Development webpack configuration
+ */
+const config = (env: Env): Configuration => merge(common(env), {
     mode: 'development',
     devtool: 'source-map',
     devServer: {
@@ -21,3 +26,6 @@ export default (env: Env): Configuration => merge(common(env), {
         },
     },
 });
+
+
+export default config;

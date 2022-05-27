@@ -3,6 +3,7 @@
         "module": "commonjs",
         "jsx": "react-jsx",
         "baseUrl": "./source",
+        "esModuleInterop": true,
         "resolveJsonModule": true,
         "strictNullChecks": true,
         "paths": {
@@ -13,7 +14,24 @@
             "@wrapper/*": ["./wrapper/*"],
             "@component/*": ["./component/*"],
             "@app/*": ["./*"]
-        }
+        },
+        "skipLibCheck": true,
+    },
+    "typedocOptions": {
+        "includeVersion": true,
+        "out": "documentation",
+        "entryPointStrategy": "expand",
+        "plugin": [
+            "./node_modules/typedoc-theme-hierarchy/dist/index.js"
+        ],
+        "theme": ["hierarchy"],
+        "entryPoints": [
+            "./webpack.development.ts",
+            "./webpack.production.ts",
+            "./webpack.common.ts",
+            "./@types",
+            "./source"
+        ]
     },
     "exclude": [
         "node_modules"

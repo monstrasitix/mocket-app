@@ -1,6 +1,5 @@
 // Yup
 import { setLocale } from 'yup';
-import { templateSettings } from 'lodash';
 
 // Model
 import { I18nKeys, I18nObject } from '@model/i18n';
@@ -13,8 +12,6 @@ export const p = (text: I18nKeys) => (
 
 
 {
-    templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-
     setLocale({
         mixed: {
             required: p('required'),

@@ -2,7 +2,9 @@
   "name": "mocket",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "./source/index.ts",
   "scripts": {
+    "doc": "typedoc && start ./documentation/index.html",
     "bundle.development": "webpack serve --config=./webpack.development.ts",
     "bundle.production": "webpack --config=./webpack.production.ts",
     "lint": "eslint ./ --ext=.ts,.tsx",
@@ -27,6 +29,8 @@
     "ts-loader": "^9.3.0",
     "ts-node": "^10.8.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typedoc": "^0.22.15",
+    "typedoc-theme-hierarchy": "^1.2.1",
     "typescript": "^4.6.4",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",

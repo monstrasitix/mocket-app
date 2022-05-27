@@ -1,6 +1,6 @@
 // React
 import { useRef } from 'react';
-import * as ReactSwipe from 'react-swipe';
+import ReactSwipe from 'react-swipe';
 
 // Components
 import { Image } from '@component/image';
