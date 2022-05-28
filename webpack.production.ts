@@ -1,11 +1,12 @@
 // Types
+import type { Env } from './webpack.common';
 import type { Configuration } from 'webpack';
 
 // Webpack
 import { merge } from 'webpack-merge';
 
 // Common
-import { Env, common } from './webpack.common';
+import { common } from './webpack.common';
 
 // Plugins
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';

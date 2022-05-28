@@ -10,10 +10,7 @@ import { templateSettings } from 'lodash';
 
 {
     templateSettings.interpolate = /{{([\s\S]+?)}}/g;
-}
 
-
-{
     bootstrap(
         document.getElementById('root') as HTMLElement
     );

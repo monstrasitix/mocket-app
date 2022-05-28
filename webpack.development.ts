@@ -1,12 +1,13 @@
 // Types
 import 'webpack-dev-server';
+import type { Env } from './webpack.common';
 import type { Configuration } from 'webpack';
 
 // Webpack
 import { merge } from 'webpack-merge';
 
 // Common
-import { Env, common, root } from './webpack.common';
+import { common, root } from './webpack.common';
 
 
 /**

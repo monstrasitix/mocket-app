@@ -1,15 +1,14 @@
 // Types
-import type { Configuration } from 'webpack';
 import type { Merchant } from '@type/merchant';
-
+import type { Configuration } from 'webpack';
 
 // Node
 import { resolve } from 'path';
 
 // Plugins
+import HTMLPlugin from 'html-webpack-plugin';
 import { DefinePlugin } from 'webpack';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import HTMLPlugin from 'html-webpack-plugin';
 
 
 /**

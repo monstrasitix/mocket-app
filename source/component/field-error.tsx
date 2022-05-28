@@ -1,28 +1,34 @@
 // Types
 import type { Path } from 'react-hook-form';
+import type { TranslationReturn } from '@hook/translation';
 
-// React
+// Lodash
 import { get, template } from 'lodash';
 
 // Hooks
 import { useTranslation } from '@hook/translation';
 
+// Models
+import { I18nObject } from '@model/i18n';
+
 
 export type Props<T> = {
     name: Path<T>;
     errors: Record<PropertyKey, {
-        message: string | object;
+        message: I18nObject;
     }>;
 };
 
 
+export const parseMessage = (
+    trans: TranslationReturn<string>,
+    { text, params }: I18nObject,
+) => {
+    const translated = trans(text);
 
-export const parseMessage = (trans, { message }) => {
-    if (typeof message == 'object') {
-        return template(trans(message.text))(message.params);
-    }
-
-    return trans(message);
+    return params
+        ? template(translated)(params)
+        : translated;
 };
 
 
@@ -32,7 +38,7 @@ export const FieldError = <T,>({ name, errors }: Props<T>) => {
     if (name in errors) {
         return (
             <span className="error">
-                {parseMessage(t, get(errors, name, { message: '' }))}
+                {parseMessage(t, get(errors, name).message)}
             </span>
         );
     }
