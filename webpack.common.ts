@@ -1,10 +1,13 @@
 // Types
 import type { Configuration } from 'webpack';
+import type { Merchant } from '@type/merchant';
+
 
 // Node
 import { resolve } from 'path';
 
 // Plugins
+import { DefinePlugin } from 'webpack';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import HTMLPlugin from 'html-webpack-plugin';
 
@@ -12,13 +15,17 @@ import HTMLPlugin from 'html-webpack-plugin';
 /**
  * @summary ENV params
  */
-export type Env = object;
+export type Env = {
+    merchant: string;
+};
 
 
 /**
  * @summary Converted ENV params
  */
-export type EnvParams = object;
+export type EnvParams = {
+    merchant: Merchant;
+};
 
 
 /**
@@ -36,9 +43,9 @@ export const root = (path: string): string => (
  * @param {Env} env - Env params
  * @returns {EnvParams} Converted ENV params
  */
-export const processEnv = (env: Env): EnvParams => (
-    env
-);
+export const processEnv = ({ merchant = 'marketing2' }: Env): EnvParams => ({
+    merchant: require(`./@merchant/${merchant}.ts`).default as Merchant,
+});
 
 
 /**
@@ -47,7 +54,7 @@ export const processEnv = (env: Env): EnvParams => (
  * @returns {Configuration} Common webpack configuration
  */
 export const common = (env: Env): Configuration => {
-    processEnv(env);
+    const { merchant } = processEnv(env);
 
     return {
         entry: {
@@ -91,6 +98,9 @@ export const common = (env: Env): Configuration => {
         plugins: [
             new HTMLPlugin({
                 template: root('./public/index.html'),
+            }),
+            new DefinePlugin({
+                MERCHANT: JSON.stringify(merchant),
             }),
         ],
     };

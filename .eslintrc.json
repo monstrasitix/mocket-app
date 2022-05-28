@@ -11,6 +11,7 @@
     ],
     "rules": {
         "eol-last": "error",
+        "@typescript-eslint/no-var-requires": 0,
         "comma-style": "error",
         "no-return-await": "error",
         "no-trailing-spaces": "error",

@@ -6,6 +6,7 @@
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "strictNullChecks": true,
+        "skipLibCheck": true,
         "paths": {
             "@view/*": ["./view/*"],
             "@hook/*": ["./hook/*"],
@@ -13,18 +14,25 @@
             "@model/*": ["./model/*"],
             "@wrapper/*": ["./wrapper/*"],
             "@component/*": ["./component/*"],
+            "@type/*": ["../@types/*"],
             "@app/*": ["./*"]
         },
-        "skipLibCheck": true
+        "typeRoots": [
+            "./node_modules/@types",
+            "./@types"
+        ]
     },
+    "exclude": [
+        "./node_modules"
+    ],
     "typedocOptions": {
         "includeVersion": true,
         "out": "documentation",
         "entryPointStrategy": "expand",
+        "theme": ["hierarchy"],
         "plugin": [
             "./node_modules/typedoc-theme-hierarchy/dist/index.js"
         ],
-        "theme": ["hierarchy"],
         "entryPoints": [
             "./webpack.development.ts",
             "./webpack.production.ts",
@@ -32,8 +40,5 @@
             "./@types",
             "./source"
         ]
-    },
-    "exclude": [
-        "node_modules"
-    ]
+    }
 }
