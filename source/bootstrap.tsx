@@ -11,8 +11,6 @@ import { Landing } from '@view/landing';
 
 
 /**
- * @summary Does something
- * @example
  * @returns {JSX.Element}
  */
 export const App = () => (
@@ -25,10 +23,6 @@ export const App = () => (
 
 /**
  * @summary Root render
- * @example
- * ```TypeScript
- * bootstrap(document.getElementById('root'));
- * ```
  * @param {HTMLElement} target - Render to it
  */
 export const bootstrap = (target: HTMLElement) => {

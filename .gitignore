@@ -1,3 +1,5 @@
 /bundled
 /node_modules
 /documentation
+/coverage
+/yarn-error.log

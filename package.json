@@ -4,14 +4,18 @@
   "license": "MIT",
   "main": "./source/index.ts",
   "scripts": {
-    "doc": "typedoc && start ./documentation/index.html",
+    "doc": "typedoc",
+    "doc.open": "start ./documentation/index.html",
     "bundle.development": "webpack serve --config=./webpack.development.ts",
     "bundle.production": "webpack --config=./webpack.production.ts",
     "lint": "eslint ./ --ext=.ts,.tsx",
     "start": "npm run bundle.development",
-    "build": "npm run bundle.production"
+    "build": "npm run bundle.production",
+    "test": "jest"
   },
   "devDependencies": {
+    "@jest/types": "^28.1.0",
+    "@types/jest": "^27.5.1",
     "@types/node": "^17.0.35",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
@@ -23,9 +27,11 @@
     "css-loader": "^6.7.1",
     "eslint": "^8.16.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.0",
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
+    "ts-jest": "^28.0.3",
     "ts-loader": "^9.3.0",
     "ts-node": "^10.8.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",

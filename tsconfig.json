@@ -15,7 +15,7 @@
             "@component/*": ["./component/*"],
             "@app/*": ["./*"]
         },
-        "skipLibCheck": true,
+        "skipLibCheck": true
     },
     "typedocOptions": {
         "includeVersion": true,
