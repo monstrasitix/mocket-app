@@ -39,7 +39,7 @@ export const Login = () => {
 
 
     const handleSubmit: SubmitHandler<F> = () => {
-        navigate('app');
+        navigate('/');
     };
 
 

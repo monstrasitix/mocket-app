@@ -11,7 +11,7 @@ import { common, root } from './webpack.common';
 
 
 /**
- * @summary Webpack Development
+ * Webpack Development
  * @param {Env} env - Env params
  * @returns {Configuration} Development webpack configuration
  */

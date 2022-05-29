@@ -13,7 +13,7 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 
 /**
- * @summary Webpack Production
+ * Webpack Production
  * @param {Env} env - Env params
  * @returns {Configuration} Production webpack configuration
  */
