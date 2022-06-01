@@ -7,7 +7,7 @@ const merchant: Merchant = {
     domain: 'com.aphixsoftware.pocketshopapp',
     company: {
         title: 'Pocketshop by Aphix',
-        website: 'http://marketing2.webshop.aphixsoftware.com',
+        website: 'http://aphixsoftware.com',
         telephone: '(041) 213 7222',
         email: 'info@pocketshop.ie',
         address: [
@@ -22,8 +22,7 @@ const merchant: Merchant = {
     },
     branding: {
         appName: 'Pocketshop by Aphix',
-        assets: './css-file.scss',
-        theme: './css-file.scss',
+        assets: 'something',
     },
 };
 

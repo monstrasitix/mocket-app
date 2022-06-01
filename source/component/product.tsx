@@ -32,11 +32,11 @@ export const Product = ({ product, ...rest }: Props) => {
                 </button>
             </div>
             <div className="card-content">
-                <p>{product.title}</p>
+                <p className="prod-content heading">{product.title}</p>
 
-                <div>{product.sku}</div>
+                <div className="heading prod-content" style={{ fontSize: '0.8rem' }}>{product.sku}</div>
 
-                <div>{formatCurrency(product.price)} ex VAT</div>
+                <div><span className="price">{formatCurrency(product.price)}</span> ex VAT</div>
             </div>
             <div className="flow -vertical">
                 <button className="button -primary">

@@ -4,18 +4,18 @@ import type { SchemaOf } from 'yup';
 
 // React
 import { useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 // Models
 import { I18nKeys } from '@model/i18n';
 
 // Utils
-import { isEmail, isPassword } from '@util/validation';
 import { object } from 'yup';
+import { isEmail, isPassword } from '@util/validation';
 
 // Components
 import { Form } from '@component/form';
-import { FormButton } from '@component/form-button';
+import { Image } from '@component/image';
 import { Email, Password } from '@component/input';
 
 // Hooks
@@ -27,6 +27,12 @@ export type F = {
     password: string;
 };
 
+/*
+[] Powered BY Aphix Software
+[] Logo
+[] Banner
+[] Forgot Password?
+*/
 
 export const Login = () => {
     const t = useTranslation<I18nKeys>();
@@ -43,9 +49,26 @@ export const Login = () => {
     };
 
 
+    const imageSize = 100;
+
     return (
-        <div className="container -modal">
-            <div className="box -centered -viewport-height">
+        <div className="box -viewport-height" style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="box -centered" style={{ height: '40%', backgroundColor: 'silver' }}>
+                <div style={{ textAlign: 'center' }}>
+                    <Image
+                        src=""
+                        alt=""
+                        className="image"
+                        style={{ width: imageSize, height: imageSize }}
+                    />
+                    <p>
+                        <strong>{MERCHANT.branding.appName}</strong>
+                    </p>
+                    <Link to="/login">{MERCHANT.company.website}</Link>
+                </div>
+            </div>
+
+            <div className="container -modal" style={{ display: 'flex', flexGrow: 1, flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center' }}>
                 <Form schema={schema} onSubmit={handleSubmit}>
                     <div className="flow -vertical">
                         <div>
@@ -56,12 +79,19 @@ export const Login = () => {
                             <Password<F> className="input" name="password" placeholder="Password" />
                         </div>
 
-                        <FormButton className="button -primary">
+                        <button type="submit" className="button -primary">
                             {t('button.login')}
-                        </FormButton>
+                        </button>
+
+                        <Link className="button -secondary" to="/login">
+                            Forgot Password
+                        </Link>
                     </div>
                 </Form>
+
+                <p>Powered by aphix software</p>
             </div>
         </div>
+
     );
 };

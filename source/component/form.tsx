@@ -43,6 +43,7 @@ export const Form = <T,>({
                 noValidate
                 className="form"
                 autoComplete="off"
+                aria-autocomplete="none"
                 autoCapitalize="off"
                 onSubmit={methods.handleSubmit(onSubmit, onError)}
             />

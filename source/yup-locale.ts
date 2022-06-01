@@ -11,7 +11,7 @@ export const simple = (key: I18nKeys): I18nObject => ({
 
 
 export const complex = (key: I18nKeys) => (
-    (params): I18nObject => ({ text: key, params })
+    <T extends object>(params: T): I18nObject => ({ text: key, params })
 );
 
 

@@ -56,12 +56,10 @@ export type MerchantCompany = {
  * App personalisation with external styles and images.
  * Styling should be flexible and image resources availale during build.
  * @summary Branding
- * @property {string} theme - Theme for styling
  * @property {string} assets - Path for assets
  * @property {string} appName - Display name for application
  */
 export type MerchantBranding = {
-    theme: string;
-    assets: string,
     appName: string;
+    assets: string;
 };

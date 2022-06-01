@@ -27,13 +27,13 @@ export const Landing = () => {
             <div className="container -page">
                 <div className="flow -vertical" style={{ margin: '1rem 0' }}>
                     <section>
-                        <h3>{t('title.featuredProducts')}</h3>
+                        <h3 className="heading">{t('title.featuredProducts')}</h3>
 
                         <FeaturedProducts />
                     </section>
 
                     <section>
-                        <h3>{t('title.categories')}</h3>
+                        <h3 className="heading">{t('title.categories')}</h3>
 
                         <div className="grid -two">
                             {range(0, 4).map(id => (
@@ -45,7 +45,7 @@ export const Landing = () => {
                     </section>
 
                     <section>
-                        <h3>{t('title.newsletters')}</h3>
+                        <h3 className="heading">{t('title.newsletters')}</h3>
 
                         <div className="grid">
                             {range(0, 2).map(id => (

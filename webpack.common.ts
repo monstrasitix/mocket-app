@@ -95,7 +95,7 @@ export const common = (env: Env): Configuration => {
     return {
         entry: {
             main: [
-                root('./styles/index.scss'),
+                root(`./styles/theme/${merchant.key}.scss`),
                 root('./source/index.ts'),
             ],
         },
@@ -119,6 +119,9 @@ export const common = (env: Env): Configuration => {
         },
 
         resolve: {
+            alias: {
+                '@style': root('../ui/scss'),
+            },
             extensions: [
                 '.js',
                 '.json',
