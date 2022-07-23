@@ -2,7 +2,7 @@
 import '@app/yup-locale';
 
 // App
-import { bootstrap } from './bootstrap';
+import { bootstrap } from '@app/bootstrap';
 
 // Dependencies
 import { templateSettings } from 'lodash';

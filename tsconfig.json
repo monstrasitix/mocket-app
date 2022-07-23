@@ -8,14 +8,14 @@
         "strictNullChecks": true,
         "skipLibCheck": true,
         "paths": {
-            "@view/*": ["./view/*"],
-            "@hook/*": ["./hook/*"],
-            "@util/*": ["./util/*"],
-            "@model/*": ["./model/*"],
-            "@wrapper/*": ["./wrapper/*"],
-            "@component/*": ["./component/*"],
+            "@view/*": ["./core/view/*"],
+            "@hook/*": ["./core/hook/*"],
+            "@util/*": ["./core/util/*"],
+            "@model/*": ["./core/model/*"],
+            "@wrapper/*": ["./core/wrapper/*"],
+            "@component/*": ["./core/component/*"],
             "@type/*": ["../@types/*"],
-            "@app/*": ["./*"]
+            "@app/*": ["./core/*"]
         },
         "typeRoots": [
             "./node_modules/@types",
