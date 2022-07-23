@@ -101,7 +101,7 @@ export const common = (env: Env): Configuration => {
         },
 
         output: {
-            path: root('./bundled'),
+            path: root('./www'),
             filename: '[name].[contenthash].bundle.js',
         },
 

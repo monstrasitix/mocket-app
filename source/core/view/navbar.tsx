@@ -1,17 +1,32 @@
-// Components
-import { Icon } from '@component/icon';
+// MUI
+import Box from '@mui/material/Box';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+
+// Icons
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import QrCodeIcon from '@mui/icons-material/QrCode';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 export const Navbar = () => (
-    <div className="navbar">
-        <div>
-            <button className="button -primary"><Icon name="bars" /></button>
-        </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Box sx={{ flexGrow: 1 }}>
+            <IconButton color="inherit" edge="start">
+                <MenuIcon />
+            </IconButton>
+          </Box>
 
-        <div>
-            <button className="button -primary"><Icon name="barcode" /></button>
-            <button className="button -primary"><Icon name="search" /></button>
-            <button className="button -primary"><Icon name="shopping-cart" /></button>
-        </div>
-    </div>
+          <Box>
+            <IconButton color="inherit"><QrCodeIcon /></IconButton>
+            <IconButton color="inherit"><SearchIcon /></IconButton>
+            <IconButton color="inherit"><ShoppingCartIcon /></IconButton>
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </Box>
 );

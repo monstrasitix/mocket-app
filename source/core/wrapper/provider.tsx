@@ -1,5 +1,9 @@
 // Types
 import type { PropsWithChildren } from 'react';
+import { ThemeProvider } from '@mui/material';
+
+// App
+import theme from '@app/theme';
 
 // React
 import { StrictMode } from 'react';
@@ -22,7 +26,9 @@ export const Provider = ({ children }: Props) => (
         <TranslationProvider language={english}>
             <OnlineProvider online={navigator.onLine}>
                 <ImagesProvider fallback="/image/placeholder.png">
-                    <StrictMode children={children} />
+                    <ThemeProvider theme={theme}>
+                        <StrictMode children={children} />
+                    </ThemeProvider>
                 </ImagesProvider>
             </OnlineProvider>
         </TranslationProvider>
